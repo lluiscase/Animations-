@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <p>Loading...</p>
+    </div>
+
+    <script>
+        document.querySelector('body').addEventListener('mousemove',loading)
+        function loading(){
+            var light = document.querySelectorAll('.ring')
+            light.forEach(function(light){
+                let x = (light.getBoundingClientRect().left) + (light.clientWidth/2)
+                let y = (light.getBoundingClientRect().top) + (light.clientHeight/2)
+                let radian = Math.atan2(event.pageX - x, event.pageY - y)
+                let rot = (radian * (180/Math.PI) * -1) + 0
+                light.style.transform = "rotate("+rot + "deg)"
+            })
+            
+        }
+    </script>
+</body>
+</html>

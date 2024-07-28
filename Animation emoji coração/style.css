@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #5d3800;
+}
+
+.face{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #ffcd00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face::before{
+    content: '';
+    position: absolute;
+    top: 180px;
+    width: 150px;
+    height: 70px;
+    background: #b57700;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    transition: 0.5s;
+}
+
+.eyes{
+position: relative;
+top: -40px;
+display: flex;
+}
+
+.eyes .heart{
+    margin: 0 15px;
+}
+
+.eyes .heart:nth-child(1){
+    transform: rotate(-20deg);
+}
+
+.eyes .heart:nth-child(2){
+    transform: rotate(20deg);
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 90px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+.heart:before,.heart:after{
+    animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate 
+{
+    0%{
+        box-shadow: 0 0 0 0px #ff3e2433,
+    0 0 0 0px #ff3e2422,
+    0 0 0 0px #ff3e2411,
+    0 0 0px #ff3e24,
+    0 0 0px #ff3e24;
+    }
+
+    25%{
+        box-shadow: 0 0 0 2px #ff3e2433,
+    0 0 0 3px #ff3e2422,
+    0 0 0 10px #ff3e2411,
+    0 0 10px #ff3e24,
+    0 0 25px #ff3e24;
+    }
+
+    50%{
+        box-shadow: 0 0 0 3px #ff3e2433,
+    0 0 0 5px #ff3e2422,
+    0 0 0 13px #ff3e2411,
+    0 0 13px #ff3e24,
+    0 0 35px #ff3e24;
+    }
+
+    75%{
+        box-shadow: 0 0 0 4px #ff3e2433,
+    0 0 0 8px #ff3e2422,
+    0 0 0 15px #ff3e2411,
+    0 0 15px #ff3e24,
+    0 0 45px #ff3e24;
+    }
+
+    100%{
+        box-shadow: 0 0 0 5px #ff3e2433,
+    0 0 0 10px #ff3e2422,
+    0 0 0 20px #ff3e2411,
+    0 0 20px #ff3e24,
+    0 0 50px #ff3e24;
+    }
+    
+}

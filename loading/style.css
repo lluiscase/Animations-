@@ -1,0 +1,103 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .ring{
+    width: 150px;
+    height: 150px;
+    margin: -30px;
+    border-radius: 50%;
+    border: 4px solid transparent ;
+    border-top: 4px solid transparent;
+    border-left: 4px solid#24ecff;
+}
+
+.container .ring::before{
+    content: '';
+    position: absolute;
+    top: initial;
+    bottom: 12px;
+    left: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #24ecff;
+    box-shadow: 0 0 0 5px #24ecff33,
+    0 0 0 10px #24ecff22,
+    0 0 0 20px #24ecff11,
+    0 0 20px #24ecff,
+    0 0 50px #24ecff;
+}
+
+.container .ring:nth-child(2){
+    border-top: 4px solid transparent;
+    border-left: 4px solid #d8ff2d;
+}
+
+.container .ring:nth-child(2):before{
+    content: '';
+    position: absolute;
+    top: initial;
+    bottom: 12px;
+    left: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #d8ff2d;
+    box-shadow: 0 0 0 5px #d8ff2d33,
+    0 0 0 10px #d8ff2d22,
+    0 0 0 20px #d8ff2d11,
+    0 0 20px #d8ff2d,
+    0 0 50px #d8ff2d;
+
+}
+
+.container .ring:nth-child(3){
+    border-top: 4px solid transparent;
+    border-left: 4px solid #f81c78;
+}
+
+.container .ring:nth-child(3):before{
+    content: '';
+    position: absolute;
+    top: initial;
+    bottom: 12px;
+    left: 12px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #f81c78;
+    box-shadow: 0 0 0 5px #f81c7833,
+    0 0 0 10px #f81c7822,
+    0 0 0 20px #f81c7811,
+    0 0 20px #f81c78,
+    0 0 50px #f81c78;
+}
+
+.container p{
+    position: absolute;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: consolas;
+    bottom: -80px;
+    letter-spacing: 0.15em;
+}
